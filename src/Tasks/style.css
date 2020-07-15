@@ -1,0 +1,86 @@
+.taskList__header{
+    display: flex;
+    background-color: #fff;
+    flex-wrap: wrap;
+    margin: 0 0 2px;
+    padding: 15px;
+    justify-content: flex-end;
+}
+@media(max-width: 767px){
+    .taskList__header{
+        flex-direction: column;
+        justify-content: center;
+    }
+  }
+.section__header{
+    justify-self: flex-start;
+    flex-grow: 1;
+}
+@media(max-width: 767px){
+    .section__header{
+        justify-self: unset;
+        flex-basis: 100%;
+    }
+  }
+
+.tasks {
+    background-color: #fff;
+    min-height: 70px;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+}
+
+.tasks__item {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tasks__item--hide{
+    display: none;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons__button:disabled{
+    color: gray;
+}
+.tasks__checkButton {
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 10px;
+    color: #fff;
+    font-weight: bold;
+    transition: 1s;
+}
+.tasks__checkButton:hover {
+    background-color: rgb(0, 223, 0);
+}
+.tasks__deleteButton {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 10px;
+    justify-self: flex-end;
+    color: #fff;
+    transition: 1s;
+}
+.tasks__deleteButton:hover{
+    background-color: rgb(255, 111, 111);
+}
+.icon-trash::before{
+    margin: auto;
+}
+.tasks__text{
+    flex-grow: 1;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tasks__text--lineThrough {
+    text-decoration: line-through;
+}
