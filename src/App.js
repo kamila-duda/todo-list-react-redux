@@ -3,7 +3,8 @@ import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
-import Container from "./Container"
+import Container from "./Container";
+import "./fontello/css/fontello.css";
 const tasks = [
   {id: 1, content: "przejśc na Reacta", done: false},
   {id: 2, content: "wyjść z psem", done: true},
