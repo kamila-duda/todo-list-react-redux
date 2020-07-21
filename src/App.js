@@ -9,9 +9,13 @@ const tasks = [
   {id: 1, content: "przejśc na Reacta", done: false},
   {id: 2, content: "wyjść z psem", done: true},
 ];
-const hideDone = false;
 
 function App() {
+  const [hideDone, setHideDone] = useState(false);
+
+  const toggleHideDone = () => {
+    setHideDone(hideDone => !hideDone);
+  }
   return (
     <Container>
         <h1 className="header">Lista zadań</h1>
@@ -19,7 +23,13 @@ function App() {
         title="Dodaj nowe zadanie" body={<Form />} 
         />
         <Section 
-        title="Lista zadań"  extraContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+        title="Lista zadań"  
+        extraContent= { <Buttons 
+          tasks={tasks} 
+          hideDone={hideDone} 
+          toggleHideDone ={toggleHideDone} 
+          />
+        }
         body={<Tasks tasks={tasks} hideDone={hideDone}/>} 
         />
         
