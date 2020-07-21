@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -9,8 +9,8 @@ import "./fontello/css/fontello.css";
 function App() {
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState([
-    {id: 1, content: "przejśc na Reacta", done: false},
-    {id: 2, content: "wyjść z psem", done: true},
+    { id: 1, content: "przejśc na Reacta", done: false },
+    { id: 2, content: "wyjść z psem", done: true },
   ]);
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -18,23 +18,35 @@ function App() {
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   }
+
+  const toggleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    }));
+  }
   return (
     <Container>
-        <h1 className="header">Lista zadań</h1>
-        <Section 
-        title="Dodaj nowe zadanie" body={<Form />} 
+      <h1 className="header">Lista zadań</h1>
+      <Section
+        title="Dodaj nowe zadanie" body={<Form />}
+      />
+      <Section
+        title="Lista zadań"
+        extraContent={<Buttons
+          tasks={tasks}
+          hideDone={hideDone}
+          toggleHideDone={toggleHideDone}
         />
-        <Section 
-        title="Lista zadań"  
-        extraContent= { <Buttons 
-          tasks={tasks} 
-          hideDone={hideDone} 
-          toggleHideDone ={toggleHideDone} 
-          />
         }
-        body={<Tasks tasks={tasks} hideDone={hideDone} removeTask = {removeTask}/>} 
-        />
-        
+        body={<Tasks
+          tasks={tasks}
+          hideDone={hideDone} removeTask={removeTask}
+          toggleTaskDone={toggleTaskDone} />}
+      />
+
     </Container>
   );
 }
