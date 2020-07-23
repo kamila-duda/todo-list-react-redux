@@ -5,6 +5,9 @@ const Form = ({ addNewTask }) => {
     const [taskContent, setNewTask] = useState("");
     const onFormSubmit = (event) => {
         event.preventDefault();
+        if (taskContent==="") {
+            return;
+        }; 
         addNewTask(taskContent.trim());
         setNewTask("");
     };
