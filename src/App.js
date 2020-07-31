@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Form from './Form'
 import Tasks from './Tasks'
 import Buttons from './Buttons'
@@ -7,7 +7,9 @@ import Container from './Container'
 import './fontello/css/fontello.css'
 
 function App () {
-  const [hideDone, setHideDone] = useState(false)
+  const [hideDone, setHideDone] = useState(
+    String(localStorage.getItem("hideDone")) === "false" ? false : Boolean(localStorage.getItem("hideDone"))
+  )
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem('tasks')) === null
       ? []
@@ -17,6 +19,10 @@ function App () {
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone)
   }
+ 
+  useEffect(() => {
+    localStorage.setItem("hideDone", hideDone);
+  }, [hideDone]);
 
   const removeTask = id => {
     setTasks(tasks => tasks.filter(task => task.id !== id))

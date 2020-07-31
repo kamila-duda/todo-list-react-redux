@@ -2,9 +2,11 @@ import React, { useEffect } from 'react'
 import './style.css'
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
+  
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
-  }, [tasks])
+  }, [tasks]);
+
   if (!tasks.length) {
     return <p>brak zadań do wykonania</p>
   }
