@@ -8,20 +8,25 @@ import './fontello/css/fontello.css'
 
 function App () {
   const [hideDone, setHideDone] = useState(
-    String(localStorage.getItem("hideDone")) === "false" ? false : Boolean(localStorage.getItem("hideDone"))
-  )
+    localStorage.getItem('hideDone') === 'false'
+      ? false
+      : JSON.parse(localStorage.getItem('hideDone'))
+  );
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem('tasks')) === null
       ? []
       : JSON.parse(localStorage.getItem('tasks'))
-  )
-
+  );
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone)
   }
- 
+
   useEffect(() => {
-    localStorage.setItem("hideDone", hideDone);
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem('hideDone', JSON.stringify(hideDone))
   }, [hideDone]);
 
   const removeTask = id => {
