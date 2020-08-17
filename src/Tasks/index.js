@@ -1,41 +1,35 @@
 import React from 'react'
-import './style.css'
+import {List, Item, CheckButton, DeleteButton, Content} from "./styled"
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
   if (!tasks.length) {
     return <p>brak zadań do wykonania</p>
   }
   return (
-    <ul className='tasks'>
+    <List>
       {tasks.map(task => (
-        <li
+        <Item
           key={task.id}
-          className={`tasks__item${
-            task.done && hideDone ? '  tasks__item--hide' : ''
-          } `}
+          hidden = {task.done && hideDone}
         >
-          <button
+          <CheckButton
             onClick={() => toggleTaskDone(task.id)}
-            className='tasks__checkButton'
           >
             <i className={task.done ? 'icon-ok' : ''}></i>
-          </button>
-          <span
-            className={`tasks__text ${
-              task.done ? 'tasks__text--lineThrough' : ''
-            }`}
+          </CheckButton>
+          <Content
+          taskDone = {task.done}
           >
             {task.content}
-          </span>
-          <button
+          </Content>
+          <DeleteButton
             onClick={() => removeTask(task.id)}
-            className='tasks__deleteButton'
           >
             <i className='icon-trash-empty'></i>
-          </button>
-        </li>
+          </DeleteButton>
+        </Item>
       ))}
-    </ul>
+    </List>
   )
 }
 

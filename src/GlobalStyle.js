@@ -1,21 +1,16 @@
-html {
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
+  html {
   box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
-.body{
+} 
+body{
   background-color: #ddd;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.container{
-  max-width: 900px;
-  margin: 40px auto;
-}
-@media(max-width: 767px){
-.container{
-  margin: 10px;
-}
-}
+`;
