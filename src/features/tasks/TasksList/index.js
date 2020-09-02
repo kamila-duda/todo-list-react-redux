@@ -1,7 +1,7 @@
 import React from 'react'
 import {List, Item, CheckButton, DeleteButton, Content} from "./styled"
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
+const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
   if (!tasks.length) {
     return <p>brak zadań do wykonania</p>
   }
@@ -33,4 +33,4 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
   )
 }
 
-export default Tasks
+export default TasksList
