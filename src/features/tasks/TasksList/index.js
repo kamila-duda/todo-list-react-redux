@@ -1,10 +1,11 @@
 import React from 'react'
+import {useSelector, useDispatch} from "react-redux"
 import {List, Item, CheckButton, DeleteButton, Content} from "./styled"
+import { selectTasks, toggleTaskDone } from '../tasksSlice'
 
-const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
-  if (!tasks.length) {
-    return <p>brak zadań do wykonania</p>
-  }
+const TasksList = ({ removeTask }) => {
+  const {tasks, hideDone} = useSelector(selectTasks)
+  const dispatch = useDispatch();
   return (
     <List>
       {tasks.map(task => (
@@ -13,7 +14,7 @@ const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
           hidden = {task.done && hideDone}
         >
           <CheckButton
-            onClick={() => toggleTaskDone(task.id)}
+            onClick={() => dispatch(toggleTaskDone(task.id))}
           >
             <i className={task.done ? 'icon-ok' : ''}></i>
           </CheckButton>
