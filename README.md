@@ -2,6 +2,34 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Application to create a list of tasks. https://kamila-duda.github.io/todo-list-react-redux/
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Status](#status)
+* [Contact](#contact)
+* [Available Scripts](#available-scripts)
+
+## General info
+You can create your own TO-DO List, check your task and remove when finish.
+
+![homepage screenshot](https://github.com/kamila-duda/todo-list-react-redux/blob/master/public/screen.PNG?raw=true)
+
+## Technologies
+* Html
+* Css
+* JavaScript
+* React.js
+* Redux
+
+## Status
+Project is: _not finished_.
+
+## Contact
+Created by [@Kamila Duda](https://github.com/kamila-duda)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
