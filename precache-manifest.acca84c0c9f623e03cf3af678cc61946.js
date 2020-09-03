@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0053c4bca5b407a44319c80466558f98",
+    "revision": "607b10006a6129777e436912fd80a975",
     "url": "/todo-list-react/index.html"
   },
   {
-    "revision": "d771a8e9dc6bb81ac2bb",
-    "url": "/todo-list-react/static/css/main.d1587d1a.chunk.css"
+    "revision": "f667606cdf0e5c04dc1f",
+    "url": "/todo-list-react/static/css/main.5e5ba2c8.chunk.css"
   },
   {
-    "revision": "3d6cb5e405fab4bd86e0",
-    "url": "/todo-list-react/static/js/2.49298c4f.chunk.js"
+    "revision": "bf2379fe505418e01560",
+    "url": "/todo-list-react/static/js/2.a978f892.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/todo-list-react/static/js/2.49298c4f.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/todo-list-react/static/js/2.a978f892.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d771a8e9dc6bb81ac2bb",
-    "url": "/todo-list-react/static/js/main.b54b7f67.chunk.js"
+    "revision": "f667606cdf0e5c04dc1f",
+    "url": "/todo-list-react/static/js/main.44a2b94b.chunk.js"
   },
   {
     "revision": "d2ce1cbae4c6bd42d20e",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/todo-list-react/static/media/fontello.95d66681.eot"
   },
   {
-    "revision": "b55f247733fb2205700d41f1c492910d",
-    "url": "/todo-list-react/static/media/fontello.b55f2477.svg"
+    "revision": "d08e4281a387c800b53b71bc4b967f4f",
+    "url": "/todo-list-react/static/media/fontello.d08e4281.svg"
   },
   {
     "revision": "f99a13284e7cae4a7e686d370f4cac19",
