@@ -11,11 +11,11 @@ function* fetchExampleTasksHandler() {
     yield call(alert, "Coś poszło nie tak");
   }
 }
-
 function* saveTasksInLocalStorageHandler() {
     const tasks = yield select(selectTasks);
-    yield call(saveTasksInLocalStorage, tasks)
+    yield call(saveTasksInLocalStorage, tasks);
 }
+
 
 export function* watchFetchExampleTasks() {
     yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
