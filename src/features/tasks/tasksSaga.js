@@ -12,12 +12,11 @@ function* fetchExampleTasksHandler() {
   }
 }
 function* saveTasksInLocalStorageHandler() {
-    const tasks = yield select(selectTasks);
-    yield call(saveTasksInLocalStorage, tasks);
+  const tasks = yield select(selectTasks);
+  yield call(saveTasksInLocalStorage, tasks);
 }
 
-
 export function* watchFetchExampleTasks() {
-    yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
-    yield takeEvery("*", saveTasksInLocalStorageHandler);
+  yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
+  yield takeEvery("*", saveTasksInLocalStorageHandler);
 }
