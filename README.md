@@ -14,7 +14,11 @@ Application to create a list of tasks. https://kamila-duda.github.io/todo-list-r
 ## General info
 You can create your own TO-DO List, check your task and remove when finish.
 
-![homepage screenshot](https://github.com/kamila-duda/todo-list-react-redux/blob/master/public/screen.PNG?raw=true)
+How application works:
+![gif of the application works](https://github.com/kamila-duda/todo-list-react-redux/blob/master/public/gif.gif?raw=true)
+
+Single task detail:
+![single task details](https://github.com/kamila-duda/todo-list-react-redux/blob/master/public/taskDetails.PNG?raw=true)
 
 ## Technologies
 * Html
@@ -22,6 +26,11 @@ You can create your own TO-DO List, check your task and remove when finish.
 * JavaScript
 * React.js
 * Redux
+* redux-saga
+* react-router-dom
+* @reduxjs/toolkit
+* styled-components
+* local storage
 
 ## Status
 Project is: _not finished_.
