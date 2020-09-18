@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 export const List = styled.ul`
@@ -58,9 +59,11 @@ export const Content = styled.span`
       text-decoration: line-through;
     `}
 `
-
-// export const Icon = styled.i`
-//     &::before{
-//         margin: auto;
-//     }
-// `;
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: teal;
+    transition: 0.3s;
+    &:hover {
+      color: rgb(10, 218, 218);
+    }
+`;

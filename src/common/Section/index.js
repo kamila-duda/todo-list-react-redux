@@ -3,8 +3,8 @@ import { SectionContainer, SectionHeader, SectionBody } from './styled'
 
 const Section = ({ title, body, extraContent }) => (
   <SectionContainer>
-    <SectionHeader>{title}</SectionHeader>
-    {extraContent}
+    <SectionHeader>{title}{extraContent}</SectionHeader>
+    
     <SectionBody>{body}</SectionBody>
   </SectionContainer>
 )

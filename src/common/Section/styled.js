@@ -11,6 +11,8 @@ export const SectionHeader = styled.h2`
   margin: 0;
   padding: 20px;
   font-size: 22px;
+  display: flex;
+  justify-content: space-between;
 `
 
 export const SectionBody = styled.div`

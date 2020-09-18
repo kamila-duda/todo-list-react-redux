@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { FormContainer, FormInput, Button } from './styled'
-import { addTask } from '../tasksSlice'
+import { FormContainer, Button} from './styled'
+import { addTask } from '../../tasksSlice'
 import { nanoid } from '@reduxjs/toolkit'
-
+import FormInput from "../../Input"
 const Form = () => {
   const [taskContent, setNewTask] = useState('')
   const inputRef = useRef(null)
@@ -24,7 +24,6 @@ const Form = () => {
         id: nanoid()
       })
     )
-
     setNewTask('')
   }
 
